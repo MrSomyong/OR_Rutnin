@@ -1,0 +1,259 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="solution.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%: Page.Title %> RUTNIN OPERATION ROOM</title>
+
+    <%--<asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />--%>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap core CSS-->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="Content/font-awesome-animation.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template-->
+    <link href="/css/sb-admin.css" rel="stylesheet">
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />    
+    
+    <%--<link href="/css/datepicker.css" rel="stylesheet" />--%>
+    <link href="/css/bootstrap-datepicker.css" rel="stylesheet" />
+
+    <link href="/Content/Site.css" rel="stylesheet" />
+
+    <script src="/vendor/jquery/jquery.min.js"></script>    
+</head>
+<body class="fixed-nav bg-dark" id="page-top">
+    <form runat="server">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <a class="navbar-brand" href="index.html">RUTNIN : OR</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+                    <li runat="server" id="menuReserveReadOnly" class="nav-item" data-toggle="tooltip" data-placement="right" title="รายการจองห้อง">
+                        <a class="nav-link" href="/Reserve/Views/">
+                            <i class="fa fa-fw fa-calendar-plus-o"></i>
+                            <span class="nav-link-text">รายการจองห้อง</span>
+                        </a>
+                    </li>                    
+                    <li runat="server" id="menuReserve" class="nav-item" data-toggle="tooltip" data-placement="right" title="รายการจองห้อง">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseReserve" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-calendar"></i>
+                            <span class="nav-link-text">รายการจองห้อง</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseReserve">
+
+                            <li>
+                                <a href="/Reserve/"><i class="fa fa-fw fa-calendar"></i>จองห้องทั้งหมด</a>
+                            </li>
+                            <li>
+                                <a href="/Reserve/Add"><i class="fa fa-fw fa-plus-circle"></i>เพิ่มจองห้อง</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    
+                    <li runat="server" id="menuAppointment" class="nav-item" data-toggle="tooltip" data-placement="right" title="นัดหมาย">
+                        <a class="nav-link" href="/Appointment/">
+                            <i class="fa fa-fw fa-calendar-plus-o"></i>
+                            <span class="nav-link-text">นัดหมาย</span>
+                        </a>
+                    </li>
+
+                    <li runat="server" id="Li1" class="nav-item" data-toggle="tooltip" data-placement="right" title="Setup">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseViewSurger" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">View bookings</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseViewSurger">
+                            <li>
+                                <a href="/DoctorSchedule/"><i class="fa fa-fw fa-calendar-plus-o"></i>Doctor surgery</a>
+                            </li>
+                            <li>
+                                <a href="/PatientsSchedule/"><i class="fa fa-fw fa-calendar-plus-o"></i>Doctor bookings</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li runat="server" id="menuPostOR" class="nav-item" data-toggle="tooltip" data-placement="right" title="Post OR">
+                        <a class="nav-link" href="/PostOR/">
+                            <i class="fa fa-fw fa-calendar-plus-o"></i>
+                            <span class="nav-link-text">Post OR</span>
+                        </a>
+                    </li>
+                   <%-- <li runat="server" id="menuReportPostOR" class="nav-item" data-toggle="tooltip" data-placement="right" title="Report Post OR">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-fw fa-bar-chart"></i>
+                            <span class="nav-link-text">Report Post OR</span>
+                        </a>
+                    </li>--%>
+                    <li runat="server" id="menuReport" class="nav-item" data-toggle="tooltip" data-placement="right" title="รายงาน">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapsereport" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-bar-chart"></i>
+                            <span class="nav-link-text">รายงานการส่งผ่าตัด</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapsereport">
+                            <li>
+                                <a href="/Reserve/Report/O">Operation</a>
+                            </li>
+                            <li>
+                                <a href="/Reserve/Report/OP">O P</a><%--//Operation + Procedure--%>
+                            </li>
+                            <li>
+                                <a href="/Reserve/Report/OPD">O P D</a><%--Operation + Procedure + Doctor--%>
+                            </li>
+                            <li>
+                                <a href="/Reserve/Report/Anesthesia">Anesthesia </a>
+                            </li> 
+                            <li>
+                                <a href="/Reserve/Report/StatCase">Stat Case</a>
+                            </li>        
+                            <li>
+                                <a href="/Reserve/Report/StatWard">Stat Ward</a>
+                            </li> 
+                        </ul>                        
+                    </li>
+                    <li runat="server" id="menuInjectionRoom" class="nav-item" data-toggle="tooltip" data-placement="right" title="Injection Room">
+                        <a class="nav-link" href="/InjectionRoom/">
+                            <i class="fa fa-fw fa-calendar-plus-o"></i>
+                            <span class="nav-link-text">Injection Room</span>
+                        </a>
+                    </li>
+                    <li runat="server" id="menuReports" class="nav-item" data-toggle="tooltip" data-placement="right" title="รายงาน">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseReports" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-bar-chart"></i>
+                            <span class="nav-link-text">Report Post OP</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseReports">
+                            <li>
+                                <a href="/Reports/rptSurgery">ทะเบียนผ่าตัด</a>
+                            </li>
+                            <li>
+                                <a href="/Reports/rptTop5">จัดอันดับ Top 5</a>
+                            </li>
+                            <li>
+                                <a href="/Reports/rptSurgeryProcedrue">รายละเอียดการผ่าตัดแยก Procedure</a>
+                            </li>
+                            <li>
+                                <a href="/Reports/rptSurgeryOrgan">การผ่าตัดแยกตาม Organ </a>
+                            </li> 
+                            <li>
+                                <a href="/Reports/rptSurgeryStatAth">สถิติการผ่าตัดแยกตามเจ้าหน้าที่</a>
+                            </li>      
+                            <li>
+                                <a href="/Reports/rptSurgery48">ผ่าตัดซ้ำภายใน 48ชม.</a>
+                            </li>    
+                            <li>
+                                <a href="/Reports/rptIndicatorProcedure">Indicator  แยกตามแพทย์และ Procedure</a>
+                            </li> 
+                        </ul>     
+                    </li>
+                    <li runat="server" id="menuSetup" class="nav-item" data-toggle="tooltip" data-placement="right" title="Setup">
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                            <i class="fa fa-fw fa-wrench"></i>
+                            <span class="nav-link-text">Setup</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="collapseComponents">
+                            <li>
+                                <a href="/Doctor/"><i class="fa fa-fw fa-user-circle-o"></i>Doctor</a>
+                            </li>
+                            <li>
+                                <a href="/Nurse/"><i class="fa fa-fw fa-user-circle"></i>Nurse</a>
+                            </li>
+                            <li>
+                                <a href="/Preset/"><i class="fa fa-fw fa-tachometer"></i>Preset</a>
+                            </li>
+                            <li>
+                                <a href="/Setup/Implant"><i class="fa fa-fw fa-cog"></i>Implant</a>
+                            </li>
+                            <li>
+                                <a href="/Setup/Organ"><i class="fa fa-fw fa-cog"></i>ORGAN</a>
+                            </li>
+                            <li>
+                                <a href="/Setup/Complication"><i class="fa fa-fw fa-cog"></i>Complication</a>
+                            </li>
+                            <li>
+                                <a href="/Setup/ORRoom"><i class="fa fa-fw fa-cog"></i>ORRoom</a>
+                            </li>
+                            <li>
+                                <a href="/Setup/ORRoomType"><i class="fa fa-fw fa-cog"></i>ORRoomType</a>
+                            </li>
+                            <li>
+                                <a href="/Setup/Printer"><i class="fa fa-fw fa-print"></i>Printer</a>
+                            </li>                            
+                            <li>
+                                <a href="/Auth/UserList"><i class="fa fa-fw fa-users"></i>User ID</a>
+                            </li>    
+                            <li>
+                                <a href="/Setup/UserRoomType"><i class="fa fa-fw fa-cog"></i>User + RoomType</a>
+                            </li>  
+                            <li>
+                                <a href="/Setup/RoomTypeProce"><i class="fa fa-fw fa-cog"></i>RoomType + ProcedureCode</a>
+                            </li>                             
+                        </ul>
+                    </li>
+<%--                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Audit Log">
+                        <a class="nav-link" href="/LogOR/">
+                            <i class="fa fa-fw fa-eye"></i>
+                            <span class="nav-link-text">Audit Log</span>
+                        </a>
+                    </li>--%>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Logout">
+                        <a class="nav-link" href="/Auth/Logout">
+                            <i class="fa fa-fw fa-sign-out"></i>
+                            <span class="nav-link-text">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav sidenav-toggler">
+                    <li class="nav-item">
+                        <a class="nav-link text-center" id="sidenavToggler">
+                            <i class="fa fa-fw fa-angle-left"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content-wrapper">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer class="sticky-footer">
+                <div class="container">
+                    <div class="text-center">
+                        <small>Copyright © 2017</small>
+                    </div>
+                </div>
+            </footer>
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+
+            <!-- Bootstrap core JavaScript-->
+            
+            <script src="/vendor/popper/popper.min.js"></script>
+            <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="/js/sb-admin.min.js"></script>
+            
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ORHEADER">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ORID" type="xs:string" minOccurs="0" />
+              <xs:element name="HN" type="xs:string" minOccurs="0" />
+              <xs:element name="PatientName" type="xs:string" minOccurs="0" />
+              <xs:element name="PatientInfection" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PatientType1" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PatientType2" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PatientUP" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PatientName_IPPU" type="xs:string" minOccurs="0" />
+              <xs:element name="ORDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="strORDate" type="xs:string" minOccurs="0" />
+              <xs:element name="ORTimeFollow" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ORTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ArrivalTime" type="xs:string" minOccurs="0" />
+              <xs:element name="ORStatCase" type="xs:int" minOccurs="0" />
+              <xs:element name="ORCase" type="xs:string" minOccurs="0" />
+              <xs:element name="ORSpecificType" type="xs:string" minOccurs="0" />
+              <xs:element name="NSR" type="xs:string" minOccurs="0" />
+              <xs:element name="ORStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="RoomType" type="xs:string" minOccurs="0" />
+              <xs:element name="ORRoom" type="xs:string" minOccurs="0" />
+              <xs:element name="AnesthesiaType1" type="xs:string" minOccurs="0" />
+              <xs:element name="AnesthesiaType2" type="xs:string" minOccurs="0" />
+              <xs:element name="AnesthesiaSign" type="xs:string" minOccurs="0" />
+              <xs:element name="Surgeon1" type="xs:string" minOccurs="0" />
+              <xs:element name="Surgeon2" type="xs:string" minOccurs="0" />
+              <xs:element name="Surgeon3" type="xs:string" minOccurs="0" />
+              <xs:element name="SurgeonMaster" type="xs:string" minOccurs="0" />
+              <xs:element name="AnesthesiaDoctor1" type="xs:string" minOccurs="0" />
+              <xs:element name="AnesthesiaDoctor2" type="xs:string" minOccurs="0" />
+              <xs:element name="AnesthesiaDoctor3" type="xs:string" minOccurs="0" />
+              <xs:element name="AnesthesiaNurse1" type="xs:string" minOccurs="0" />
+              <xs:element name="AnesthesiaNurse2" type="xs:string" minOccurs="0" />
+              <xs:element name="AnesthesiaNurse3" type="xs:string" minOccurs="0" />
+              <xs:element name="Remark" type="xs:string" minOccurs="0" />
+              <xs:element name="AppointmentNo" type="xs:string" minOccurs="0" />
+              <xs:element name="BirthDateTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Age" type="xs:string" minOccurs="0" />
+              <xs:element name="Sex" type="xs:string" minOccurs="0" />
+              <xs:element name="Ref" type="xs:string" minOccurs="0" />
+              <xs:element name="Nationality" type="xs:string" minOccurs="0" />
+              <xs:element name="CreateBy" type="xs:string" minOccurs="0" />
+              <xs:element name="CreateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="strCreateDate" type="xs:string" minOccurs="0" />
+              <xs:element name="UpdateBy" type="xs:string" minOccurs="0" />
+              <xs:element name="UpdateDate" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OROPERATION">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="ORID" type="xs:string" minOccurs="0" />
+              <xs:element name="MainCode" type="xs:string" minOccurs="0" />
+              <xs:element name="SubCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Side" type="xs:string" minOccurs="0" />
+              <xs:element name="strSide" type="xs:string" minOccurs="0" />
+              <xs:element name="SubMark" type="xs:string" minOccurs="0" />
+              <xs:element name="strSubMark" type="xs:string" minOccurs="0" />
+              <xs:element name="SubName" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Reamrk" type="xs:string" minOccurs="0" />
+              <xs:element name="Seq" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VT_DOCTORMASTER">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DOCTOR" type="xs:string" minOccurs="0" />
+              <xs:element name="DoctorName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VT_ROOMTYPE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="NAME" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VT_ANESTHESIA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="NAME" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VT_OPERATIONROOM">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="NAME" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ORANESTHESIADOCTORSCHEDULE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Doctor" type="xs:string" minOccurs="0" />
+              <xs:element name="DoctorName" type="xs:string" minOccurs="0" />
+              <xs:element name="StartAnesthesiaDateTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="strStartAnesthesiaDateTime" type="xs:string" minOccurs="0" />
+              <xs:element name="Reamrk" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ORANESTHESIANURSESCHEDULE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="NURSE" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="StartAnesthesiaDateTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="strStartAnesthesiaDateTime" type="xs:string" minOccurs="0" />
+              <xs:element name="Reamrk" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="REPORT_HEADER">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REPORTNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ORDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
