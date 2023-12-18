@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1CFD08B-FB5B-4F86-BB62-B247B896F1E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADOUtil, Version=1.0.3516.31432, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\ADOUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLayer\BLAPPOINTMENT.cs" />
+    <Compile Include="BusinessLayer\BLDatabaseInfo.cs" />
+    <Compile Include="BusinessLayer\BLANESTHESIA.cs" />
+    <Compile Include="BusinessLayer\BLDOCTORMASTER.cs" />
+    <Compile Include="BusinessLayer\BLNURSEMASTER.cs" />
+    <Compile Include="BusinessLayer\BLOPERATIONROOM.cs" />
+    <Compile Include="BusinessLayer\BLORANESTHESIADOCTORSCHEDULE.cs" />
+    <Compile Include="BusinessLayer\BLORANESTHESIANURSESCHEDULE.cs" />
+    <Compile Include="BusinessLayer\BLDOCUMENT_ITEM.cs" />
+    <Compile Include="BusinessLayer\BLHNUnderly.cs" />
+    <Compile Include="BusinessLayer\BLORLog.cs" />
+    <Compile Include="BusinessLayer\BLORMIGRATION.cs" />
+    <Compile Include="BusinessLayer\BLSETUPCOMPLICATION.cs" />
+    <Compile Include="BusinessLayer\BLPOSTORWARNING.cs" />
+    <Compile Include="BusinessLayer\BLPOSTORICD.cs" />
+    <Compile Include="BusinessLayer\BLSETUPCOMPUTER.cs" />
+    <Compile Include="BusinessLayer\BLSETUPCOMPUTERMETHOD.cs" />
+    <Compile Include="BusinessLayer\BLSETUPGROUPMETHOD.cs" />
+    <Compile Include="BusinessLayer\BLSETUPGROUPMETHODCLINIC.cs" />
+    <Compile Include="BusinessLayer\BLSETUPGROUPMETHODCOMPUTER.cs" />
+    <Compile Include="BusinessLayer\BLSETUPGROUPMETHODDOCTOR.cs" />
+    <Compile Include="BusinessLayer\BLSETUPGROUPMETHODMEDICINE.cs" />
+    <Compile Include="BusinessLayer\BLSETUPGROUPMETHODTREATMENT.cs" />
+    <Compile Include="BusinessLayer\BLSETUPHYPERLINK.cs" />
+    <Compile Include="BusinessLayer\BLSETUPICDCM.cs" />
+    <Compile Include="BusinessLayer\BLSETUPORGANSUB.cs" />
+    <Compile Include="BusinessLayer\BLSETUPORGANMAIN.cs" />
+    <Compile Include="BusinessLayer\BLSETUPORGAN.cs" />
+    <Compile Include="BusinessLayer\BLSETUPICD.cs" />
+    <Compile Include="BusinessLayer\BLPOSTOROPERATION.cs" />
+    <Compile Include="BusinessLayer\BLPOSTORNURSE.cs" />
+    <Compile Include="BusinessLayer\BLPOSTORIMPLANT.cs" />
+    <Compile Include="BusinessLayer\BLPOSTORHEADER.cs" />
+    <Compile Include="BusinessLayer\BLPOSTORDETAIL.cs" />
+    <Compile Include="BusinessLayer\BLPOSTORCOMPLICATION.cs" />
+    <Compile Include="BusinessLayer\BLPATIENTDIAG.cs" />
+    <Compile Include="BusinessLayer\BLPATIENTALLEGIC.cs" />
+    <Compile Include="BusinessLayer\BLROOMTYPEPROCE.cs" />
+    <Compile Include="BusinessLayer\BLSETUPUSERROOMTYPE.cs" />
+    <Compile Include="BusinessLayer\BLSETUPORROOMTYPE.cs" />
+    <Compile Include="BusinessLayer\BLSETUPORROOM.cs" />
+    <Compile Include="BusinessLayer\BLSETUPIMPLANTMAIN.cs" />
+    <Compile Include="BusinessLayer\BLSETUPIMPLANTSUB.cs" />
+    <Compile Include="BusinessLayer\BLTREATMENT_TEMP.cs" />
+    <Compile Include="BusinessLayer\BLTREATMENT.cs" />
+    <Compile Include="BusinessLayer\BLVNMST.cs" />
+    <Compile Include="BusinessLayer\BLVT_APPOINTMENTMASTER.cs" />
+    <Compile Include="BusinessLayer\BLVT_CLINIC.cs" />
+    <Compile Include="BusinessLayer\BLVT_DOSEAUX.cs" />
+    <Compile Include="BusinessLayer\BLVT_DOSECODE.cs" />
+    <Compile Include="BusinessLayer\BLVT_DOSEQTY.cs" />
+    <Compile Include="BusinessLayer\BLVT_DOSETYPE.cs" />
+    <Compile Include="BusinessLayer\BLVT_DOSEUNIT.cs" />
+    <Compile Include="BusinessLayer\BLVT_PATIENT_VN.cs" />
+    <Compile Include="BusinessLayer\BLVT_PATIENT_AN.cs" />
+    <Compile Include="BusinessLayer\BLVT_REASON.cs" />
+    <Compile Include="BusinessLayer\BLSETUPPRINTER.cs" />
+    <Compile Include="BusinessLayer\BLSETUPLOGON.cs" />
+    <Compile Include="BusinessLayer\BLROOMTYPE.cs" />
+    <Compile Include="BusinessLayer\BLSETUPOPERATIONSUB.cs" />
+    <Compile Include="BusinessLayer\BLSETUPOPERATIONMAIN.cs" />
+    <Compile Include="BusinessLayer\BLORPATIEN.cs" />
+    <Compile Include="BusinessLayer\BLOROPERATION.cs" />
+    <Compile Include="BusinessLayer\BLORHEADER.cs" />
+    <Compile Include="BusinessLayer\BLORUSER.cs" />
+    <Compile Include="BusinessLayer\BLVT_RIGHTCODE.cs" />
+    <Compile Include="BusinessLayer\BLVT_STOCKMASTER.cs" />
+    <Compile Include="BusinessLayer\BLVT_STORE.cs" />
+    <Compile Include="BusinessLayer\BLVT_TREATMENT.cs" />
+    <Compile Include="BusinessLayer\BLVT_TREATMENTCODE.cs" />
+    <Compile Include="BusinessLayer\BLVT_TREATMENTCODE_SPLITDF.cs" />
+    <Compile Include="BusinessLayer\BLVT_TREATMENTMETHODCODE.cs" />
+    <Compile Include="BusinessLayer\BLVT_UNIT.cs" />
+    <Compile Include="BusinessLayer\BLVT_VNMASTER.cs" />
+    <Compile Include="BusinessLayer\BLVT_VNMEDICINE_TEMP.cs" />
+    <Compile Include="BusinessLayer\BLVT_VNMEDICINE.cs" />
+    <Compile Include="BusinessLayer\BLVT_VNTREAT_TEMP.cs" />
+    <Compile Include="BusinessLayer\BLVT_VNTREAT.cs" />
+    <Compile Include="BusinessLayer\BLV_DOCTOR_ORDAYWEEK.cs" />
+    <Compile Include="ConstDB.cs" />
+    <Compile Include="DataAccess\DAANESTHESIA.cs" />
+    <Compile Include="DataAccess\DAAPPOINTMENT.cs" />
+    <Compile Include="DataAccess\DADatabaseInfo.cs" />
+    <Compile Include="DataAccess\DADOCTORMASTER.cs" />
+    <Compile Include="DataAccess\DADOCUMENT_ITEM.cs" />
+    <Compile Include="DataAccess\DAHNUnderly.cs" />
+    <Compile Include="DataAccess\DANURSEMASTER.cs" />
+    <Compile Include="DataAccess\DAOPERATIONROOM.cs" />
+    <Compile Include="DataAccess\DAORANESTHESIADOCTORSCHEDULE.cs" />
+    <Compile Include="DataAccess\DAORANESTHESIANURSESCHEDULE.cs" />
+    <Compile Include="DataAccess\DAORHEADER.cs" />
+    <Compile Include="DataAccess\DAORMIGRATION.cs" />
+    <Compile Include="DataAccess\DAOROPERATION.cs" />
+    <Compile Include="DataAccess\DAORPATIENT.cs" />
+    <Compile Include="DataAccess\DAORUSER.cs" />
+    <Compile Include="DataAccess\DAPATIENTALLEGIC.cs" />
+    <Compile Include="DataAccess\DAPATIENTDIAG.cs" />
+    <Compile Include="DataAccess\DAPOSTORCOMPLICATION.cs" />
+    <Compile Include="DataAccess\DAPOSTORDETAIL.cs" />
+    <Compile Include="DataAccess\DAPOSTORHEADER.cs" />
+    <Compile Include="DataAccess\DAPOSTORICD.cs" />
+    <Compile Include="DataAccess\DAPOSTORIMPLANT.cs" />
+    <Compile Include="DataAccess\DAPOSTORNURSE.cs" />
+    <Compile Include="DataAccess\DAPOSTOROPERATION.cs" />
+    <Compile Include="DataAccess\DAPOSTORWARNING.cs" />
+    <Compile Include="DataAccess\DAROLog.cs" />
+    <Compile Include="DataAccess\DAROOMTYPE.cs" />
+    <Compile Include="DataAccess\DAROOMTYPEPROCE.cs" />
+    <Compile Include="DataAccess\DASETUPCOMPLICATION.cs" />
+    <Compile Include="DataAccess\DASETUPCOMPUTER.cs" />
+    <Compile Include="DataAccess\DASETUPCOMPUTERMETHOD.cs" />
+    <Compile Include="DataAccess\DASETUPGROUPMETHOD.cs" />
+    <Compile Include="DataAccess\DASETUPGROUPMETHODCLINIC.cs" />
+    <Compile Include="DataAccess\DASETUPGROUPMETHODCOMPUTER.cs" />
+    <Compile Include="DataAccess\DASETUPGROUPMETHODDOCTOR.cs" />
+    <Compile Include="DataAccess\DASETUPGROUPMETHODMEDICINE.cs" />
+    <Compile Include="DataAccess\DASETUPGROUPMETHODTREATMENT.cs" />
+    <Compile Include="DataAccess\DASETUPHYPERLINK.cs" />
+    <Compile Include="DataAccess\DASETUPICD.cs" />
+    <Compile Include="DataAccess\DASETUPICDCM.cs" />
+    <Compile Include="DataAccess\DASETUPIMPLANTMAIN.cs" />
+    <Compile Include="DataAccess\DASETUPIMPLANTSUB.cs" />
+    <Compile Include="DataAccess\DASETUPLOGON.cs" />
+    <Compile Include="DataAccess\DASETUPOPERATIONMAIN.cs" />
+    <Compile Include="DataAccess\DASETUPOPERATIONSUB.cs" />
+    <Compile Include="DataAccess\DASETUPORGAN.cs" />
+    <Compile Include="DataAccess\DASETUPORGANMAIN.cs" />
+    <Compile Include="DataAccess\DASETUPORGANSUB.cs" />
+    <Compile Include="DataAccess\DASETUPORROOM.cs" />
+    <Compile Include="DataAccess\DASETUPORROOMTYPE.cs" />
+    <Compile Include="DataAccess\DASETUPPRINTER.cs" />
+    <Compile Include="DataAccess\DASETUPUSERROOMTYPE.cs" />
+    <Compile Include="DataAccess\DASETUPUSERTYPE.cs" />
+    <Compile Include="DataAccess\DataAccess.cs" />
+    <Compile Include="DataAccess\DATREATMENT_TEMP.cs" />
+    <Compile Include="DataAccess\DATREATMENT.cs" />
+    <Compile Include="DataAccess\DAUnderPatient.cs" />
+    <Compile Include="DataAccess\DAVNMST.cs" />
+    <Compile Include="DataAccess\DAVT_ACTIVITYCODE.cs" />
+    <Compile Include="DataAccess\DAVT_APPOINTMENTMASTER.cs" />
+    <Compile Include="DataAccess\DAVT_CLINIC.cs" />
+    <Compile Include="DataAccess\DAVT_DOSEAUX.cs" />
+    <Compile Include="DataAccess\DAVT_DOSECODE.cs" />
+    <Compile Include="DataAccess\DAVT_DOSEQTY.cs" />
+    <Compile Include="DataAccess\DAVT_DOSETYPE.cs" />
+    <Compile Include="DataAccess\DAVT_DOSEUNIT.cs" />
+    <Compile Include="DataAccess\DAVT_PATIENT_AN.cs" />
+    <Compile Include="DataAccess\DAVT_PATIENT_VN.cs" />
+    <Compile Include="DataAccess\DAVT_REASON.cs" />
+    <Compile Include="DataAccess\DAVT_RIGHTCODE.cs" />
+    <Compile Include="DataAccess\DAVT_STOCK_LEARNDOSE.cs" />
+    <Compile Include="DataAccess\DAVT_STOCK_MASTER.cs" />
+    <Compile Include="DataAccess\DAVT_STORE.cs" />
+    <Compile Include="DataAccess\DAVT_TREATMENT.cs" />
+    <Compile Include="DataAccess\DAVT_TREATMENTCODE.cs" />
+    <Compile Include="DataAccess\DAVT_TREATMENTCODE_SPLITDF.cs" />
+    <Compile Include="DataAccess\DAVT_TREATMENTMETHODCODE.cs" />
+    <Compile Include="DataAccess\DAVT_UNIT.cs" />
+    <Compile Include="DataAccess\DAVT_VNMASTER.cs" />
+    <Compile Include="DataAccess\DAVT_VNMEDICINE_TEMP.cs" />
+    <Compile Include="DataAccess\DAVT_VNMEDICINE.cs" />
+    <Compile Include="DataAccess\DAVT_VNTREAT_TEMP.cs" />
+    <Compile Include="DataAccess\DAVT_VNTREAT.cs" />
+    <Compile Include="DataAccess\DAV_DOCTOR_ORDAYWEEK.cs" />
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="Enums\DBVender.cs" />
+    <Compile Include="Enums\EiLinkType.cs" />
+    <Compile Include="Enums\EnumOR.cs" />
+    <Compile Include="Enums\HashAlgorithms.cs" />
+    <Compile Include="Enums\PM.cs" />
+    <Compile Include="Enums\SqlConnectionType.cs" />
+    <Compile Include="Enums\UserRole.cs" />
+    <Compile Include="Enums\YearType.cs" />
+    <Compile Include="GOBAL.cs" />
+    <Compile Include="Info\ACTIVITY.cs" />
+    <Compile Include="Info\DOSEAUX.cs" />
+    <Compile Include="Info\DOSECODE.cs" />
+    <Compile Include="Info\DOSEQTY.cs" />
+    <Compile Include="Info\DOSETYPE.cs" />
+    <Compile Include="Info\DOSEUNIT.cs" />
+    <Compile Include="Info\ORMIGRATIONVO.cs" />
+    <Compile Include="Info\ROOMTYPEPROCEVO.cs" />
+    <Compile Include="Info\SETUPCOMPUTER.cs" />
+    <Compile Include="Info\SETUPCOMPUTERMETHOD.cs" />
+    <Compile Include="Info\SETUPGROUPMETHOD.cs" />
+    <Compile Include="Info\SETUPGROUPMETHODCLINIC.cs" />
+    <Compile Include="Info\SETUPGROUPMETHODCOMPUTER.cs" />
+    <Compile Include="Info\SETUPGROUPMETHODDOCTOR.cs" />
+    <Compile Include="Info\SETUPGROUPMETHODMEDICINE.cs" />
+    <Compile Include="Info\SETUPGROUPMETHODTREATEMENT.cs" />
+    <Compile Include="Info\SETUPHYPERLINK.cs" />
+    <Compile Include="Info\SETUPUSERROOMTYPEVO.cs" />
+    <Compile Include="Info\SETUPORROOMTYPEVO.cs" />
+    <Compile Include="Info\SETUPORROOMVO.cs" />
+    <Compile Include="Info\SETUPCOMPLICATIONVO.cs" />
+    <Compile Include="Info\POSTORWARNINGVO.cs" />
+    <Compile Include="Info\POSTORICDVO.cs" />
+    <Compile Include="Info\SETUPICDCMVO.cs" />
+    <Compile Include="Info\SETUPORGANSUBVO.cs" />
+    <Compile Include="Info\SETUPORGANMAINVO.cs" />
+    <Compile Include="Info\SETUPORGANVO.cs" />
+    <Compile Include="Info\SETUPICDVO.cs" />
+    <Compile Include="Info\POSTORCOMPLICATIONVO.cs" />
+    <Compile Include="Info\SETUPIMPLANTMAINVO.cs" />
+    <Compile Include="Info\SETUPIMPLANTSUBVO.cs" />
+    <Compile Include="Info\HNUnderlyVO.cs" />
+    <Compile Include="Info\TREATMENT.cs" />
+    <Compile Include="Info\TYPEOFCHARGE.cs" />
+    <Compile Include="Info\UnderPatientVO.cs" />
+    <Compile Include="Info\POSTOROPERATIONVO.cs" />
+    <Compile Include="Info\POSTORNURSEVO.cs" />
+    <Compile Include="Info\POSTORIMPLANTVO.cs" />
+    <Compile Include="Info\POSTORDETAILVO.cs" />
+    <Compile Include="Info\ORLogVO.cs" />
+    <Compile Include="Info\DOCUMENT_ITEMVO.cs" />
+    <Compile Include="Info\POSTORHEADERVO.cs" />
+    <Compile Include="Info\PATIENTDIAGVO.cs" />
+    <Compile Include="Info\PATIENTALLEGICVO.cs" />
+    <Compile Include="Info\SETUPUSERTYPEVO.cs" />
+    <Compile Include="Info\UNIT.cs" />
+    <Compile Include="Info\VNMST.cs" />
+    <Compile Include="Info\VT_APPOINTMENTMASTERVO.cs" />
+    <Compile Include="Info\VT_CLINIC.cs" />
+    <Compile Include="Info\VT_DEFAULTSTORE.cs" />
+    <Compile Include="Info\VT_ORDERMETHOD.cs" />
+    <Compile Include="Info\VT_PATIENT_VNVO.cs" />
+    <Compile Include="Info\VT_PATIENT_ANVO.cs" />
+    <Compile Include="Info\VT_REASONVO.cs" />
+    <Compile Include="Info\SETUPPRINTERVO.cs" />
+    <Compile Include="Info\DOCTORMASTERVO.cs" />
+    <Compile Include="Info\OPERATIONROOMVO.cs" />
+    <Compile Include="Info\ORANESTHESIADOCTORSCHEDULEVO.cs" />
+    <Compile Include="Info\ORANESTHESIANURSESCHEDULEVO.cs" />
+    <Compile Include="Info\ORHEADERVO.cs" />
+    <Compile Include="Info\ANESTHESIAVO.cs" />
+    <Compile Include="Info\NURSEMASTERVO.cs" />
+    <Compile Include="Info\ROOMTYPEVO.cs" />
+    <Compile Include="Info\APPOINTMENTVO.cs" />
+    <Compile Include="Info\SETUPLOGONVO.cs" />
+    <Compile Include="Info\SETUPOPERATIONSUBVO.cs" />
+    <Compile Include="Info\SETUPOPERATIONMAINVO.cs" />
+    <Compile Include="Info\OROPERATIONVO.cs" />
+    <Compile Include="Info\Program.cs" />
+    <Compile Include="Info\ORPATIENTVO.cs" />
+    <Compile Include="Info\ORUSERVO.cs" />
+    <Compile Include="Info\DatabaseInfo.cs" />
+    <Compile Include="Info\IParameter.cs" />
+    <Compile Include="Info\ReturnValue.cs" />
+    <Compile Include="Info\VT_RIGHTCODE.cs" />
+    <Compile Include="Info\VT_STOCK_LEARNDOSE.cs" />
+    <Compile Include="Info\VT_STOCK_MASTER.cs" />
+    <Compile Include="Info\VT_STOCK_SYNONYM.cs" />
+    <Compile Include="Info\VT_STORE.cs" />
+    <Compile Include="Info\VT_TREATMENT.cs" />
+    <Compile Include="Info\VT_TREATMENTCODE.cs" />
+    <Compile Include="Info\VT_TREATMENTCODE_SPLITDF.cs" />
+    <Compile Include="Info\VT_TREATMENTMETHODCODE.cs" />
+    <Compile Include="Info\VT_VNMASTER.cs" />
+    <Compile Include="Info\VT_VNMEDICINE_TEMP.cs" />
+    <Compile Include="Info\VT_VNMEDICINE.cs" />
+    <Compile Include="Info\VT_VNTREAT_TEMP.cs" />
+    <Compile Include="Info\VT_VNTREAT.cs" />
+    <Compile Include="Info\V_DOCTOR_ORDAYWEEKVO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\ORUtils.cs" />
+    <Compile Include="Utils\DateFormat.cs" />
+    <Compile Include="Utils\CultureInfo.cs" />
+    <Compile Include="Utils\Encode.cs" />
+    <Compile Include="Utils\GenCode.cs" />
+    <Compile Include="Utils\language.cs" />
+    <Compile Include="Utils\Mailer.cs" />
+    <Compile Include="Utils\NullOrEmptyException.cs" />
+    <Compile Include="Utils\Nummeric.cs" />
+    <Compile Include="Utils\Parameter.cs" />
+    <Compile Include="Utils\StringFormat.cs" />
+    <Compile Include="Utils\Utilities.cs" />
+    <Compile Include="Utils\XReader.cs" />
+    <Compile Include="Utils\XWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
